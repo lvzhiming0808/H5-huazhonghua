@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>画中画</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<!-- 第一步：首先加载一个微信JS-SDK -->
+<script src="js/jweixin-1.0.0.js"></script>
+<!-- 第2步：写一些配置 -->
+<script>
+    function autoPlayAudio() {
+        wx.config({
+            // 配置信息, 即使不正确也能使用 wx.ready
+            debug: false,
+            appId: '',
+            timestamp: 1,
+            nonceStr: '',
+            signature: '',
+            jsApiList: []
+        });
+        wx.ready(function () {
+            var globalAudio = document.getElementById("media");
+            globalAudio.play();
+        });
+    }
+    ;
+    // 解决ios音乐不自动播放的问题
+    autoPlayAudio();
+</script>
+<script>
+    /*  var u = navigator.userAgent, app = navigator.appVersion;
+     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+     if (isiOS) {
+     // 禁止iphone浏览器拖动反弹（橡皮筋效果）
+     function stopScrolling(touchEvent) {
+     touchEvent.preventDefault();
+     }
+     document.addEventListener('touchstart', stopScrolling, false);
+     document.addEventListener('touchmove', stopScrolling, false);
+     //  alert(123);
+     }*/
+
+
+    var htmls = document.getElementsByTagName('html')[0];
+    var deviceWidth = document.documentElement.clientWidth;
+    htmls.style.fontSize = deviceWidth * (100 / 750) + 'px';
+    if (parseInt($('html').css('fontSize')) > 100) {
+        $('html').css('fontSize', '100px')
+    }
+    window.onresize = function () {
+        var htmls = document.getElementsByTagName('html')[0];
+        var deviceWidth = document.documentElement.clientWidth;
+        htmls.style.fontSize = deviceWidth * (100 / 750) + 'px';
+        if (parseInt($('html').css('fontSize')) > 100) {
+            $('html').css('fontSize', '100px')
+        }
+    };
+
+</script>
+<script type="text/javascript">
+    window._pt_lt = new Date().getTime();
+    window._pt_sp_2 = [];
+    _pt_sp_2.push('setAccount,2a7dc278');
+    var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    (function () {
+        var atag = document.createElement('script');
+        atag.type = 'text/javascript';
+        atag.async = true;
+        atag.src = _protocol + 'js.ptengine.cn/2a7dc278.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(atag, s);
+    })();
+</script>
+<body>
+<div id="audio_btn" class="off rotate" data-event="11205" style="display: none;">
+    <audio loop="loop" src="source/music_1.mp3" id="media" autoplay></audio>
+</div>
+<div style="display: block;" class="loading"></div>
+<div style="display: none" class="book_box">
+    <!--翻书效果-->
+    <ul style="display: block">
+        <li id="box">
+            <div class="warp pip_warp">
+                <!--第一页-->
+                <div class=" page page1 scale1" style="display: block;">
+                    <img class="img_2" src="images/2.jpg" alt=""/>
+                    <img class="img_1" src="images/1.gif" alt=""/>
+                    <!-- <div class="font_1"></div>-->
+                    <img class="font_1" src="images/font_1.png" alt=""/>
+                </div>
+                <div class="btn_box ani_btn ">
+                </div>
+                <img style="display: none" class="book_left" src="images/book_left.png" alt=""/>
+                <img style="display: none" class="font_6" src="images/font_6.png" alt=""/>
+            </div>
+            <img style="display: none" class="hand_pic" src="images/hand.gif" alt=""/>
+        </li>
+        <li id="box2"><img src="images/0002.jpg" alt=""/><img style="display: none" class="hand_pic" src="images/hand.gif" alt=""/></li>
+        <li id="box3"><img src="images/0003.jpg" alt=""/><img style="display: none" class="hand_pic" src="images/hand.gif" alt=""/></li>
+        <li id="box4 ">
+            <img class="light_gif" src="images/0004.jpg" alt=""/>
+            <img class="box4_font" src="images/font_7.png" alt=""/>
+            <img style="display: none" class="box4_font2" src="images/font_8.png" alt=""/>
+            <img style="display: none" class="lighten " src="images/lighten.png" alt=""/>
+            <img style="display: none" class="hand_pic" src="images/hand.gif" alt=""/>
+        </li>
+    </ul>
+
+</div>
+
+
+<div style="display: none;" class="warp  page6">
+    <div class="p3-box">
+        <div class="p3-posings">
+            <div class="p6-box disp">
+                <img src="images/page5-dlll.png" class="animated rubberBand">
+            </div>
+            <div class="dl-love disp">
+                <img class="dl-loves animated swing" src="images/page5-we.png">
+                <img class="dl-love1" src="images/page-ll-1.png">
+                <img class="dl-love2" src="images/page-ll-2.png">
+                <img class="dl-love3" src="images/page-ll-3.png">
+                <img class="dl-love4" src="images/page-ll-4.png">
+                <img class="dl-love5" src="images/page-ll-5.png">
+                <img class="dl-love6" src="images/page-ll-6.png">
+                <img class="dl-love7" src="images/page-ll-7.png">
+                <img class="dl-love8" src="images/page-ll-8.png">
+                <img class="dl-love9" src="images/page-ll-9.png">
+                <img class="dl-love10" src="images/page-ll-10.png">
+                <img class="dl-love11" src="images/page-ll-11.png">
+                <img class="dl-love12" src="images/page-ll-12.png">
+                <img class="dl-love13" src="images/page-ll-13.png">
+                <img class="dl-love14" src="images/page-ll-14.png">
+                <img class="dl-love15" src="images/page-ll-15.png">
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display: none;" class="warp  page7">
+    <div class="p3-box">
+        <div class="p3-posings">
+            <div class="page7-1">
+                <!--	<img src="images/page7-5.png">-->
+            </div>
+            <div style="display: block" class="page7-2">
+                <img src="images/page7-2.png" class="animated ">
+            </div>
+            <div class="page7-3 yizhi">
+                <img src="images/page7-3.png" class="animated pulse">
+            </div>
+            <div style="display: none" class="page7-4 ">
+                <img src="images/page7-6.png">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/my.js"></script>
+<script src="js/touch.js"></script>
+</body>
+<script>
+    document.addEventListener('touchmove', function (e) {
+        vare = e || event;
+        e.preventDefault();
+    }, false);
+</script>
+</html>
